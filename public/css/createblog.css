@@ -1,0 +1,28 @@
+body{
+    margin:2rem;
+}
+.main_cont{
+    margin-top: 2rem;
+}
+.back{
+    margin:auto;
+}
+.material{
+    font-size: 1.5rem;
+}
+.upload{
+    width:100%;
+}
+#heading h1{
+    background-color: black;
+    text-align: center;
+    color:white;
+    border-radius: 1rem;
+    padding:1rem;
+}
+.heading_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
