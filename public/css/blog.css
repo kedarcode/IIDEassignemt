@@ -39,8 +39,10 @@ body {
   align-items: center;
   text-align: center;
   padding :1rem;
+  width: 5rem;
+  border-radius: 1rem;
   margin:0.5rem;
-  height: 5rem;
+  height:2rem;
   background-color: black;
   color: white;
 }

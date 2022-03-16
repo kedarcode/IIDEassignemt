@@ -14,9 +14,9 @@ hbs.registerPartials(__dirname +'/views/partials');
 hbs.registerHelper('ifeq', function(arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
     });
-app.use('/',require('./routes/pages'));
+app.use('/blogs',require('./routes/blogsreq'));
 
  
-app.listen(3001,()=>
-console.log("server started at 3001")
+app.listen(3000,()=>
+console.log("server started at 3000")
 )

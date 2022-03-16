@@ -1,11 +1,10 @@
-fetch("http://localhost:3001/getblogs")
+fetch("http://localhost:3000/blogs/getblogs")
   .then((response) => response.json())
   .then((data) => {
     loadblogs(data.blogs);
   });
-
+//load blogs on home page
 function loadblogs(data) {
-  console.log(data);
   data.forEach((element) => {
     ctext = document.createElement("div");
     ctext.append(
@@ -36,36 +35,33 @@ function loadblogs(data) {
     open_but.setAttribute("onClick", "openblog(this)");
 
     ctext.append(open_but);
-    cb.append(ct, ctext);
+    cb.append(ct, ctext,del_but);
     elem = createblog({ type: "div", cname: "card card_cont", elem: cb });
-    elem.append(del_but);
     document.getElementById("blog_cont").append(elem);
   });
 }
+//delete blog from home page
 function delete_call(e) {
-  console.log(e.id);
   $.post(
-    "/deleteblog",
+    "/blogs/deleteblog",
     {
       id:e.id
     },
     function (data, status) {
-      console.log(status);
       alert("blog deleted");
-      location.href=("http://localhost:3001/");
+      location.href=("http://localhost:3000/blogs");
     }
   );
 }
+//open blog 
 function openblog(e) {
-        location.href=("http://localhost:3001/openblog?id="+e.id);
+        location.href=("http://localhost:3000/blogs/openblog?id="+e.id);
       }
-
-
+//create blog
 function createblog(info) {
   fin = document.createElement(info.type);
   fin.className = info.cname;
   if (info.id) fin.id = info.id;
-
   if (info.elem) fin.append(info.elem);
 
   return fin;

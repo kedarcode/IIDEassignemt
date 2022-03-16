@@ -5,3 +5,9 @@ margin-top: 2rem;
 #save{
     display: none;
 }
+.content_blog{
+    margin: 1rem;
+}
+.material textarea[type='text'][disabled] {
+	color: #EBEBE4;
+}

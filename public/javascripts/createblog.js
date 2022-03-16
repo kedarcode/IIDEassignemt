@@ -7,7 +7,7 @@ $(document).ready(function () {
             alert('please fill the form')
         }
         else{
-       $.post("/uploadblog",
+       $.post("/blogs/uploadblog",
           {   
              title: document.getElementById('blog_title').value,
              content: document.getElementById('blog_content').value,
@@ -16,7 +16,7 @@ $(document).ready(function () {
           function (data, status) {
              console.log(status)
              alert('blog uploaded')
-             location.href=("http://localhost:3001/")
+             location.href=("http://localhost:3000/blogs")
           });
         }
     });

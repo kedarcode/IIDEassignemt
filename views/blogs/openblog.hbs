@@ -29,7 +29,7 @@
         <div class="col-2"><button
             type="button"
             class="btn back btn-dark"
-            onclick="window.location.href='/'"
+            onclick="window.location.href='/blogs'"
           >Back</button></div>
         <div class="col-10 heading_cont">
 
@@ -37,20 +37,18 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="form-group">
-            <textarea
-              disabled="true"
-              class="form-control material"
+          <div >
+            <div
+              contenteditable="false"
+              class="content_blog"
               id="blog_title"
-              rows="1"
-            ></textarea>
-            <textarea
+            ></div>
+            <div
               oninput="auto_increase(this)"
-              disabled="true"
-              class="form-control material"
+              contenteditable="false"
+              class="content_blog"
               id="blog_content"
-              rows="20"
-            ></textarea>
+            ></div>
           </div>
         </div>
       </div>
@@ -71,8 +69,8 @@
         </div>
       </div>
     </div>
-    <h10 id="idy">{{dat}}</h10>
-    <script src="javascripts/openblog.js"></script>
+    <h10 id="idy" style="display:none;">{{dat}}</h10>
+    <script src="/javascript/openblog.js"></script>
 
   </body>
 </html>

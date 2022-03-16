@@ -27,7 +27,7 @@
         <div class="col-2"><button
             type="button"
             class="btn back btn-dark"
-            onclick="window.location.href='/'"
+            onclick="window.location.href='/blogs'"
           >Back</button></div>
         <div class="col-10 heading_cont">
           <label id="heading"><h1>Create Blog</h1></label></div>
@@ -36,13 +36,15 @@
         <div class="col-12">
           <div class="form-group">
             <label for="blog_title"><h2>Title </h2></label>
-            <textarea
+            <textarea 
+               style="white-space: pre-wrap;"
               class="form-control material"
               id="blog_title"
               rows="1"
             ></textarea>
             <label for="blog_content"><h2>Content </h2></label>
             <textarea
+             style="white-space: pre-wrap;"
             oninput="auto_increase(this)"
               class="form-control material"
               id="blog_content"
@@ -61,7 +63,7 @@
         </div>
       </div>
     </div>
-            <script src="javascripts/createblog.js"></script>
+            <script src="/javascript/createblog.js"></script>
 
   </body>
 </html>
